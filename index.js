@@ -11,7 +11,7 @@ server.use("/api", userRouter)
 
 server.use((err, req, res, next) => {
     console.log(err)
-    req.status(500).json({
+    res.status(500).json({
         message: "Something went wrong. Please try again later."
     })
 })
